@@ -1,11 +1,12 @@
-import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 const TodoHeader = () => {
+
   return (
     <View style={[styles.header,styles.elevation, styles.shadowProp]}>
       <View>
-        <Text style={styles.headerText}>Todo</Text>
+        <Text style={styles.headerText}>To Do</Text>
       </View>
       <View>
         <Image source={require('../../assets/logo.png')}/>
@@ -28,7 +29,8 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: "white",
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: "Poppins-Bold"
   },
   elevation: {
     elevation: 20,
