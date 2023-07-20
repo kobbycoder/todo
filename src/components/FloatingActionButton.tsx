@@ -1,25 +1,29 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
   View,
   Animated,
   TouchableWithoutFeedback,
 } from "react-native";
-import { AntDesign, Entypo } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { AntDesign } from "@expo/vector-icons";
 
-type style = {
-  style: {};
+interface Props {
+  style?: any;
 };
 
-const openAddTodo = () => {
-  console.log("clicked");
-};
+// Defining a type for the navigation object specific to the FloatingActionButton component
+type FloatingActionButtonNavigation = {
+    navigate: (screen: 'AddTodo') => void;
+    // Add other navigation methods if needed
+  };
 
-const FloatingActionButton = (props: style) => {
+const FloatingActionButton: React.FC<Props> = ({ style }) => {
+    const navigation = useNavigation<FloatingActionButtonNavigation>()
+
   return (
-    <TouchableWithoutFeedback onPress={openAddTodo}>
-      <View style={[styles.container, props.style, styles.button, styles.menu]}>
+    <TouchableWithoutFeedback onPress={() => navigation.navigate('AddTodo')}>
+      <View style={[styles.container, style, styles.button, styles.menu]}>
         <Animated.View>
           <AntDesign name="plus" size={25} color="#fff" />
         </Animated.View>

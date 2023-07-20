@@ -1,10 +1,14 @@
 import React from "react";
-import 'reflect-metadata';
-import { SafeAreaView, StyleSheet, Platform, StatusBar } from "react-native";
+import "reflect-metadata";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import { useFonts } from "expo-font";
 import { Provider } from "react-redux";
 import store from "./src/store/store";
+import AddTodo from "./src/screens/AddTodo";
 import Main from "./src/Main";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,17 +23,20 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.AndroidSafeArea}>
-        <Main />
-      </SafeAreaView>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="MainScreen">
+          <Stack.Screen
+            name="MainScreen"
+            component={Main}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AddTodo"
+            component={AddTodo}
+            options={{ headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  AndroidSafeArea: {
-    flex: 1,
-    backgroundColor: "#DAFFFB",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
