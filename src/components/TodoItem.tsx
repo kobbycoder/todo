@@ -1,18 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { useDispatch } from "react-redux";
 import { Todo } from "../types/Todo";
 
 const TodoItem: React.FC<Todo> = (props: Todo) => {
-  // const dispatch = useDispatch();
-
-  // const handleToggleTodo = () => {
-  //   dispatch(toggleTodo(item.id));
-  // };
-
-  // const handleDeleteTodo = () => {
-  //   dispatch(deleteTodo(item.id));
-  // };
 
   return (
     <TouchableOpacity>

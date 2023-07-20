@@ -1,12 +1,16 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
-const TodoHeader = () => {
+interface Props {
+  title: string
+}
+
+const TodoHeader: React.FC<Props> = ({ title }) => {
 
   return (
     <View style={[styles.header,styles.elevation, styles.shadowProp]}>
       <View>
-        <Text style={styles.headerText}>To Do</Text>
+        <Text style={styles.headerText}>{title}</Text>
       </View>
       <View>
         <Image source={require('../../assets/logo.png')}/>
