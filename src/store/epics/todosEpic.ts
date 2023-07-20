@@ -1,20 +1,34 @@
-import { Epic, ofType } from 'redux-observable';
-import { map, switchMap, catchError } from 'rxjs/operators';
-import { from, of } from 'rxjs';
-import Dependencies from '../../types/Dependancies';
-import Todo  from '../../types/Todo';
-import { fetchTodos, fetchTodosSuccess, fetchTodosFailure } from '../actions';
+import { ofType } from "redux-observable";
+import { catchError, from, map, mergeMap, of } from "rxjs";
+import {
+  getTodosAction,
+  getAllTodoSuccessAction,
+  getAllTodoFailedAction,
+} from "../todosSlice";
+import { container } from "tsyringe";
+import ApiService from "../../services/apiServices";
 
-const todosEpic: Epic = (action$, state$, { ApiService }: Dependencies) => {
+export const todosEpic = (action$: any, state$: any) => {
+  const api = container.resolve(ApiService);
+
   return action$.pipe(
-    ofType(fetchTodos.type),
-    switchMap(() =>
-      from(ApiService.fetchTodos()).pipe(
-        map((todos: Todo[]) => fetchTodosSuccess(todos)),
-        catchError((error) => of(fetchTodosFailure(error.message)))
+    ofType(getTodosAction),
+    mergeMap((action: any) =>
+      from(api.fetchTodos()).pipe(
+        map((response: any) => {
+          if (response) {
+            return getAllTodoSuccessAction(response);
+          } else {
+            throw response;
+          }
+        }),
+        catchError((err) => {
+          let result = {
+            message: err,
+          };
+          return of(getAllTodoFailedAction(result));
+        })
       )
     )
   );
 };
-
-export default todosEpic;

@@ -1,5 +1,3 @@
-// src/store/actions.ts
-
 import { createAction } from '@reduxjs/toolkit';
 import Todo from '../types/Todo';
 

@@ -1,34 +1,32 @@
-// todosSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import Todo from "../types/Todo";
+import { AllTodosInterface } from "../types/AllTodosInterface";
 
-interface TodosState {
-  items: Todo[];
-  // Add other state properties if needed
-}
-const initialState: TodosState = {
-  items: [],
+const initialState: AllTodosInterface = {
+  todos: [],
+  isLoading: false,
+  isSuccessful: false,
+  error: {}
 };
 
-const todosSlice = createSlice({
-  name: 'todos',
+export const todosSlice = createSlice({
+  name: "todos",
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<Todo>) => {
-      state.items.push(action.payload);
+    getTodosAction: (state: any) => {
+      state.isLoading = true;
     },
-    toggleTodo: (state, action: PayloadAction<number>) => {
-      const todo = state.items.find((item) => item.id === action.payload);
-      if (todo) {
-        todo.completed = !todo.completed;
-      }
+    getAllTodoSuccessAction: (state: any, action: PayloadAction<[]>) => {
+      state.todos = action.payload;
+      state.isLoading = false;
+      state.isSuccessful = true;
     },
-    deleteTodo: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload);
+    getAllTodoFailedAction: (state: any, action: PayloadAction<{}>) => {
+      state.isSuccessful = false;
+      state.result = action.payload;
     },
   },
 });
 
-export const { addTodo, toggleTodo, deleteTodo } = todosSlice.actions;
+export const { getTodosAction, getAllTodoSuccessAction, getAllTodoFailedAction } = todosSlice.actions;
 
 export default todosSlice.reducer;

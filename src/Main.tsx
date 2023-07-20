@@ -5,12 +5,18 @@ import TodoList from "./components/TodoList";
 
 export default function Main(): JSX.Element {
   return (
-    <View>
-      <View>
+    <View style={styles.container}>
         <TodoHeader />
         <TodoList />
-      </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    height: '100%'
+  },
+});
+
 

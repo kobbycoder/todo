@@ -5,7 +5,6 @@ import { useFonts } from "expo-font";
 import { Provider } from "react-redux";
 import store from "./src/store/store";
 import Main from "./src/Main";
-import './src/services/container'; //
 
 export default function App() {
   const [fontsLoaded] = useFonts({

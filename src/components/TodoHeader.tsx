@@ -19,6 +19,7 @@ export default TodoHeader;
 
 const styles = StyleSheet.create({
   header: {
+    flex: 1,
     flexDirection: "row",
     width: "100%",
     height: "45%",

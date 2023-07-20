@@ -3,6 +3,9 @@
     "name": "todo",
     "slug": "todo",
     "version": "1.0.0",
+    "extra": {
+      "expoDotenv": "./.env"
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
