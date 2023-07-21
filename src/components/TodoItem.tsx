@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Todo } from "../types/Todo";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Swipeable } from "react-native-gesture-handler";
 
@@ -17,7 +17,7 @@ type TodoItemNavigation = {
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
   const navigation = useNavigation<TodoItemNavigation>();
 
-  const handleUpdateTodo = () => {
+  const openEditTodoScreen = () => {
     navigation.navigate("EditTodo", { todo });
   };
 
@@ -34,7 +34,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
 
   return (
     <Swipeable renderRightActions={renderRightActions}>
-      <TouchableOpacity onPress={handleUpdateTodo}>
+      <TouchableOpacity onPress={openEditTodoScreen}>
         <View style={styles.container}>
           <View style={styles.todoListItems}>
             <Text

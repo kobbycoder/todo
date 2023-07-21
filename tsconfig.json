@@ -3,6 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "target": "ESNext", // Or "ES6"
+    "module": "ESNext", // Or "ES6"
   }
 }

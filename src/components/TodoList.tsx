@@ -9,9 +9,7 @@ const TodoList = () => {
   const isLoading = useSelector((state: any) => state.allTodos.isLoading); // Add isLoading from the store
 
   const dispatch = useDispatch();
-
-  console.log(todos);
-
+  
   useEffect(() => {
     dispatch(getTodosAction());
   }, []);

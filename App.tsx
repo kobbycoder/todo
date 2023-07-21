@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import store from "./src/store/store";
 import AddTodo from "./src/screens/AddTodo";
 import EditTodo from "./src/screens/EditTodo";
+import TodoItem from "./src/components/TodoItem";
 import Main from "./src/Main";
 
 const Stack = createStackNavigator();
