@@ -8,22 +8,9 @@ The app prototype design can be found at https://app.uizard.io/p/ad52b6c3/previe
 Please refer to this link to see the app prototype.
 
 ## App Screenshots
-
-<div style="display: grid; flex-wrap: wrap; width:100">
-  <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="200">
-  </div>
-  <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="200">
-  </div>
-  <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="200">
-  </div>
-  <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="200">
-  </div>
-</div>
-
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot4.png">  blah |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot1.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot2.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot3.png">
 ## Features
 
 - Create new to-do items
