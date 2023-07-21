@@ -7,6 +7,7 @@ import { useRoute, useNavigation } from "@react-navigation/native";
 import { Checkbox } from "expo-checkbox";
 import ScreenWrapper from "../ScreenWrapper";
 import TodoHeader from "../components/TodoHeader";
+import CustomButton from '../components/CustomButton'
 
 const EditTodo: React.FC = () => {
   const dispatch = useDispatch();
@@ -48,10 +49,10 @@ const EditTodo: React.FC = () => {
     <ScreenWrapper>
       <TodoHeader title="Edit Todo" />
       <View style={styles.container}>
-        <TextInput value={title} onChangeText={(e) => setTitle(e)} />
+        <TextInput value={title} onChangeText={(e) => setTitle(e)} style={styles.textInput} />
         <Checkbox value={isDone} onValueChange={(value) => setDone(value)} />
         <Text>Done</Text>
-        <Button title="Save" onPress={handleUpdateTodo} />
+        <CustomButton buttonText="Save" onPress={handleUpdateTodo} />
       </View>
     </ScreenWrapper>
   );
@@ -64,5 +65,14 @@ const styles = StyleSheet.create({
     flex: 8,
     height: "100%",
     alignItems: "center",
+  },
+  textInput: {
+    borderWidth: 2,
+    borderColor: "#64CCC5",
+    padding: 8,
+    width: "70%",
+    borderRadius: 8,
+    marginRight: 8,
+    marginVertical: 20
   },
 });

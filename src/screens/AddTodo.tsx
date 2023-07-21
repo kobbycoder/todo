@@ -8,6 +8,7 @@ import { addTodoAction } from "../store/todosSlice";
 import { Todo } from "../types/Todo";
 import ScreenWrapper from "../ScreenWrapper";
 import TodoHeader from "../components/TodoHeader";
+import CustomButton from '../components/CustomButton'
 
 const AddTodo: React.FC = () => {
   const dispatch = useDispatch();
@@ -37,11 +38,12 @@ const AddTodo: React.FC = () => {
       <TodoHeader title="Add Todo" />
       <View style={styles.container}>
         <TextInput
+        style={styles.textInput}
           placeholder="Enter todo text"
           value={text}
           onChangeText={(newText) => setText(newText)}
         />
-        <Button title="Add Todo" onPress={handleAddTodo} />
+        <CustomButton buttonText="Add Todo" onPress={handleAddTodo} />
       </View>
     </ScreenWrapper>
   );
@@ -54,5 +56,14 @@ const styles = StyleSheet.create({
     flex: 8,
     height: "100%",
     alignItems: "center",
+  },
+  textInput: {
+    borderWidth: 2,
+    borderColor: "#64CCC5",
+    padding: 8,
+    width: "70%",
+    borderRadius: 8,
+    marginRight: 8,
+    marginVertical: 20
   },
 });

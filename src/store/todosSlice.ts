@@ -39,8 +39,40 @@ export const todosSlice = createSlice({
         state.todos[updatedIndex] = action.payload;
       }
     },
-    deleteTodoAction: (state: AllTodosInterface, action: PayloadAction<number>) => {
+    updateTodoSuccessAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<Todo>
+    ) => {
+      const updatedIndex = state.todos.findIndex(
+        (todo) => todo.id === action.payload.id
+      );
+      if (updatedIndex !== -1) {
+        state.todos[updatedIndex] = action.payload;
+      }
+    },
+    updateTodoFailedAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<{ message: string }>
+    ) => {
+      state.error = action.payload;
+    },
+    deleteTodoAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<number>
+    ) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    deleteTodoSuccessAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<number>
+    ) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+    deleteTodoFailedAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<{ message: string }>
+    ) => {
+      state.error = action.payload;
     },
   },
 });
@@ -51,7 +83,11 @@ export const {
   getAllTodoFailedAction,
   addTodoAction,
   updateTodoAction,
-  deleteTodoAction
+  updateTodoSuccessAction,
+  updateTodoFailedAction,
+  deleteTodoAction,
+  deleteTodoSuccessAction,
+  deleteTodoFailedAction,
 } = todosSlice.actions;
 
 export default todosSlice.reducer;
