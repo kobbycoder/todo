@@ -6,6 +6,7 @@ import { useFonts } from "expo-font";
 import { Provider } from "react-redux";
 import store from "./src/store/store";
 import AddTodo from "./src/screens/AddTodo";
+import EditTodo from "./src/screens/EditTodo";
 import Main from "./src/Main";
 
 const Stack = createStackNavigator();
@@ -24,17 +25,19 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="MainScreen">
+        <Stack.Navigator initialRouteName="MainScreen" screenOptions={{
+          headerShown: false
+        }}>
           <Stack.Screen
             name="MainScreen"
             component={Main}
-            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="AddTodo"
             component={AddTodo}
-            options={{ headerShown: false}}
+            options={{ headerShown: false }}
           />
+          <Stack.Screen name="EditTodo" component={EditTodo} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

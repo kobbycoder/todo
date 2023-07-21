@@ -1,21 +1,36 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Todo } from "../types/Todo";
+import { useNavigation } from "@react-navigation/native";
 
-const TodoItem: React.FC<Todo> = (props: Todo) => {
+interface TodoItemProps {
+  todo: Todo;
+}
+
+// Defining a type for the navigation object specific to the TodoItem component
+type TodoItemNavigation = {
+  navigate: (screen: "EditTodo", params: { todo: Todo }) => void;
+};
+
+const TodoItem: React.FC<TodoItemProps> = ({ todo }) => {
+  const navigation = useNavigation<TodoItemNavigation>();
+
+  const handleUpdateTodo = () => {
+    navigation.navigate("EditTodo", { todo });
+  };
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={handleUpdateTodo}>
       <View style={styles.container}>
         <View style={styles.todoListItems}>
-          <Text style={[props.completed ? styles.completedText : styles.title]}>
-            {props.title}
+          <Text style={[todo.completed ? styles.completedText : styles.title]}>
+            {todo.title}
           </Text>
           <View style={styles.subTextContainer}>
             <Text style={styles.subText}>
-              {props.completed ? "completed" : "uncompleted"}
+              {todo.completed ? "completed" : "uncompleted"}
             </Text>
-            <Text>{props.completed ? '✅' : '⏳'}</Text>
+            <Text>{todo.completed ? "✅" : "⏳"}</Text>
           </View>
         </View>
       </View>
@@ -38,7 +53,7 @@ const styles = StyleSheet.create({
   subTextContainer: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   text: {
     fontSize: 16,

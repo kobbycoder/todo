@@ -15,7 +15,6 @@ interface Props {
 // Defining a type for the navigation object specific to the FloatingActionButton component
 type FloatingActionButtonNavigation = {
     navigate: (screen: 'AddTodo') => void;
-    // Add other navigation methods if needed
   };
 
 const FloatingActionButton: React.FC<Props> = ({ style }) => {

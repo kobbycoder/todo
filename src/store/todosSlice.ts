@@ -6,7 +6,7 @@ const initialState: AllTodosInterface = {
   todos: [],
   isLoading: false,
   isSuccessful: false,
-  error: {}
+  error: {},
 };
 
 export const todosSlice = createSlice({
@@ -26,11 +26,28 @@ export const todosSlice = createSlice({
       state.error = action.payload;
     },
     addTodoAction: (state: AllTodosInterface, action: PayloadAction<Todo>) => {
-      state.todos.unshift(action.payload); //I use unshift because I want the new item to move up the list
+      state.todos.unshift(action.payload);
+    },
+    updateTodoAction: (
+      state: AllTodosInterface,
+      action: PayloadAction<Todo>
+    ) => {
+      const updatedIndex = state.todos.findIndex(
+        (todo) => todo.id === action.payload.id
+      );
+      if (updatedIndex !== -1) {
+        state.todos[updatedIndex] = action.payload;
+      }
     },
   },
 });
 
-export const { getTodosAction, getAllTodoSuccessAction, getAllTodoFailedAction, addTodoAction } = todosSlice.actions;
+export const {
+  getTodosAction,
+  getAllTodoSuccessAction,
+  getAllTodoFailedAction,
+  addTodoAction,
+  updateTodoAction,
+} = todosSlice.actions;
 
 export default todosSlice.reducer;

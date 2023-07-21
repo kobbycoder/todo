@@ -21,10 +21,7 @@ const TodoList = () => {
           data={todos}
           renderItem={(itemData) => (
             <TodoItem
-              title={itemData.item.title}
-              id={itemData.item.id}
-              completed={itemData.item.completed}
-              userId={itemData.item.userId}
+              todo={itemData.item}
             />
           )}
         />

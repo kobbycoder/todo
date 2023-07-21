@@ -1,9 +1,6 @@
 import {
   View,
-  SafeAreaView,
   StyleSheet,
-  Platform,
-  StatusBar,
 } from "react-native";
 import React from "react";
 import TodoHeader from "./components/TodoHeader";
