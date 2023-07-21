@@ -1,6 +1,17 @@
 # React Native Todo App
 
-This is a mobile application built using React Native that allows users to manage their to-do lists.
+This is a mobile application built using React Native that allows users to manage their to-do lists. The app utilizes various libraries and tools to provide efficient state management, handle asynchronous actions, ensure type safety, and enable dependency injection.
+
+# App Design & Prototype
+The app prototype design can be found at https://app.uizard.io/p/ad52b6c3/preview. 
+Please refer to this link to see the app prototype.
+
+## App Screenshots
+
+![Screenshot 1](./screenshots/screenshot1.png)
+![Screenshot 2](./screenshots/screenshot2.png)
+![Screenshot 3](./screenshots/screenshot3.png)
+![Screenshot 4](./screenshots/screenshot4.png)
 
 ## Features
 
@@ -13,18 +24,18 @@ This is a mobile application built using React Native that allows users to manag
 
 The app is built using the following technologies:
 
-- React Native: A framework for building mobile applications using JavaScript and React.
-- Redux-Toolkit: A set of tools and conventions for managing the state of your React application.
-- Redux Observable: A middleware for handling asynchronous actions with RxJS.
-- Tsyringe: A dependency injection container for TypeScript.
-- TypeScript: A statically typed superset of JavaScript that adds type safety to the codebase.
-
+- React Native: A framework for building mobile applications using JavaScript and React. (https://reactnative.dev/docs/getting-started)
+- Redux-Toolkit: A set of tools and conventions for managing the state of your React application.(https://redux-toolkit.js.org/)
+- Redux Observable: A middleware for handling asynchronous actions with RxJS.(https://redux-observable.js.org/)
+- Tsyringe: A dependency injection container for TypeScript.(https://github.com/microsoft/tsyringe)
+- TypeScript: A statically typed superset of JavaScript that adds type safety to the codebase.(https://www.typescriptlang.org/docs/)
+- Jest: For testing (https://jestjs.io/docs/getting-started)
 ## Setup and Installation
 
 1. Clone the repository.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/kobbycoder/todo.git
 
 ```
 1. Install dependencies
