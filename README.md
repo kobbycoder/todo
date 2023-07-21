@@ -10,7 +10,7 @@ Please refer to this link to see the app prototype.
 ## App Screenshots
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot4.png">  blah |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot1.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot2.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot3.png">
+|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot4.png">  blah |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot1.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot2.png">||<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="./screenshots/screenshot3.png">
 ## Features
 
 - Create new to-do items
