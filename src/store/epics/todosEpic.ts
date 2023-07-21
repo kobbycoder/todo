@@ -1,9 +1,11 @@
-import { ofType } from "redux-observable";
+import { ofType, StateObservable } from "redux-observable";
 import { catchError, from, map, mergeMap, of } from "rxjs";
 import {
   getTodosAction,
   getAllTodoSuccessAction,
   getAllTodoFailedAction,
+  updateTodoAction,
+  deleteTodoAction,
 } from "../todosSlice";
 import { container } from "tsyringe";
 import ApiService from "../../services/apiServices";
@@ -29,6 +31,6 @@ export const todosEpic = (action$: any, state$: any) => {
           return of(getAllTodoFailedAction(result));
         })
       )
-    )
+    ),
   );
 };
