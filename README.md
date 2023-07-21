@@ -8,11 +8,10 @@ Please refer to this link to see the app prototype.
 
 ## App Screenshots
 
-![Screenshot 1](./screenshots/screenshot1.png)
-![Screenshot 2](./screenshots/screenshot2.png)
-![Screenshot 3](./screenshots/screenshot3.png)
-![Screenshot 4](./screenshots/screenshot4.png)
-
+<img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="300">
+<img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="300">
+<img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="300">
+<img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="300">
 ## Features
 
 - Create new to-do items
