@@ -1,6 +1,7 @@
 import {
   View,
   StyleSheet,
+  Text,
 } from "react-native";
 import React from "react";
 import TodoHeader from "./components/TodoHeader";
@@ -16,6 +17,7 @@ export default function Main(): JSX.Element {
       <ScreenWrapper>
         <View style={styles.container}>
           <TodoHeader title="Todo App"/>
+          <Text style={styles.swipeText}>Swipe on item to delete 🗑️</Text>
           <TodoList />
           <FloatingActionButton style={{ bottom: 30, right: 30 }} />
         </View>
@@ -30,4 +32,11 @@ const styles = StyleSheet.create({
     height: "100%",
     alignItems: "center",
   },
+  swipeText: {
+    margin: 10,
+    fontStyle: "italic",
+    fontWeight: "bold",
+    fontSize: 10,
+    color: "#001C30"
+  }
 });
