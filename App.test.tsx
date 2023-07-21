@@ -10,6 +10,12 @@ describe('<CustomButton />', () => {
     const tree = renderer.create(<CustomButton />).toJSON();
     expect(tree?.children?.length).toBe(1);
   });
+
+  it('renders correctly', () => {
+    const tree = renderer.create(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  
 });
 
 describe('<TodoHeader />', () => {
@@ -17,5 +23,11 @@ describe('<TodoHeader />', () => {
     const tree = renderer.create(<TodoHeader />).toJSON();
     expect(tree?.children?.length).toBe(2);
   });
+
+  it('renders correctly', () => {
+    const tree = renderer.create(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  
 });
 
