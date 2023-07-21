@@ -3,7 +3,8 @@
 This is a mobile application built using React Native that allows users to manage their to-do lists. The app utilizes various libraries and tools to provide efficient state management, handle asynchronous actions, ensure type safety, and enable dependency injection.
 
 # App Design & Prototype
-The app prototype design can be found at https://app.uizard.io/p/ad52b6c3/preview. 
+
+The app prototype design can be found at https://app.uizard.io/p/ad52b6c3/preview.
 Please refer to this link to see the app prototype.
 
 ## App Screenshots
@@ -40,6 +41,7 @@ The app is built using the following technologies:
 - Tsyringe: A dependency injection container for TypeScript.(https://github.com/microsoft/tsyringe)
 - TypeScript: A statically typed superset of JavaScript that adds type safety to the codebase.(https://www.typescriptlang.org/docs/)
 - Jest: For testing (https://jestjs.io/docs/getting-started)
+
 ## Setup and Installation
 
 1. Clone the repository.
@@ -48,6 +50,7 @@ The app is built using the following technologies:
 git clone https://github.com/kobbycoder/todo.git
 
 ```
+
 1. Install dependencies
 
 ```bash
@@ -55,6 +58,7 @@ cd react-native-todo-app
 npm install
 
 ```
+
 2. Run the app
 
 ```bash
@@ -81,15 +85,19 @@ react-native-todo-app/
   ├── tsconfig.json         # TypeScript configuration
   ├── .babelrc              # Babel configuration
   └── ...
-  ```
+```
 
 ## Testing
+
 The app includes unit tests and integration tests to ensure code quality and functionality. You can run the tests using the following command:
 
 ```bash
 npm test
 ```
 
+## Test Plan
+
+Please refer to this link to see the app test plan:
+https://docs.google.com/document/d/1_fwV1IXncOIQTc34wNX6kS3eliMMXbUZEzUWCg-mNr0/edit?usp=sharing
+
 ## Simple Todo App
-
-
