@@ -8,10 +8,21 @@ Please refer to this link to see the app prototype.
 
 ## App Screenshots
 
-<img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="300">
-<img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="300">
-<img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="300">
-<img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="300">
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 50%; padding: 5px;">
+    <img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="100%">
+  </div>
+  <div style="flex: 50%; padding: 5px;">
+    <img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="100%">
+  </div>
+  <div style="flex: 50%; padding: 5px;">
+    <img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="100%">
+  </div>
+  <div style="flex: 50%; padding: 5px;">
+    <img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="100%">
+  </div>
+</div>
+
 ## Features
 
 - Create new to-do items
