@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { StyleSheet, View, FlatList, Text } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
-import { getTodosAction } from "../store/todosSlice";
+import { getTodosAction, deleteTodoAction } from "../store/todosSlice";
 import TodoItem from "./TodoItem";
 
 const TodoList = () => {
@@ -13,6 +13,11 @@ const TodoList = () => {
     dispatch(getTodosAction());
   }, []);
 
+  const handleDeleteTodo = (id: number) => {
+    // Dispatch the action to delete the todo from the store
+    dispatch(deleteTodoAction(id));
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -22,6 +27,7 @@ const TodoList = () => {
           renderItem={(itemData) => (
             <TodoItem
               todo={itemData.item}
+              onDelete={() => handleDeleteTodo(itemData.item.id)}
             />
           )}
         />

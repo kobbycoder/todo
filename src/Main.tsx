@@ -17,7 +17,7 @@ export default function Main(): JSX.Element {
       <ScreenWrapper>
         <View style={styles.container}>
           <TodoHeader title="Todo App"/>
-          <Text style={styles.swipeText}>Swipe on item to delete 🗑️</Text>
+          <Text style={styles.swipeText}>Swipe on item to delete 🚮</Text>
           <TodoList />
           <FloatingActionButton style={{ bottom: 30, right: 30 }} />
         </View>

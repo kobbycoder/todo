@@ -39,6 +39,9 @@ export const todosSlice = createSlice({
         state.todos[updatedIndex] = action.payload;
       }
     },
+    deleteTodoAction: (state: AllTodosInterface, action: PayloadAction<number>) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
   },
 });
 
@@ -48,6 +51,7 @@ export const {
   getAllTodoFailedAction,
   addTodoAction,
   updateTodoAction,
+  deleteTodoAction
 } = todosSlice.actions;
 
 export default todosSlice.reducer;
