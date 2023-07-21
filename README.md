@@ -9,7 +9,7 @@ Please refer to this link to see the app prototype.
 
 ## App Screenshots
 
-<div style="display: flex; flex-wrap: wrap;">
+<div style="display: grid; flex-wrap: wrap;">
   <div style="flex: 50%; padding: 5px;">
     <img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="200">
   </div>
