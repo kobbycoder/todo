@@ -10,16 +10,16 @@ Please refer to this link to see the app prototype.
 
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="100%">
+    <img src="./screenshots/screenshot1.png" alt="Screenshot 1" width="200">
   </div>
   <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="100%">
+    <img src="./screenshots/screenshot2.png" alt="Screenshot 2" width="200">
   </div>
   <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="100%">
+    <img src="./screenshots/screenshot3.png" alt="Screenshot 3" width="200">
   </div>
   <div style="flex: 50%; padding: 5px;">
-    <img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="100%">
+    <img src="./screenshots/screenshot4.png" alt="Screenshot 4" width="200">
   </div>
 </div>
 
