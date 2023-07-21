@@ -7,8 +7,9 @@ import App from './App'
 
 describe('<CustomButton />', () => {
   it('has 1 child', () => {
-    const tree = renderer.create(<CustomButton />).toJSON();
-    expect(tree?.children?.length).toBe(1);
+    const tree = renderer.create(<CustomButton buttonText='Test' onPress={() => console.log('Testing')
+    } />).toJSON();
+    expect(tree?.children.length).toBe(1);
   });
 
   it('renders correctly', () => {
@@ -20,8 +21,8 @@ describe('<CustomButton />', () => {
 
 describe('<TodoHeader />', () => {
   it('has 2 child', () => {
-    const tree = renderer.create(<TodoHeader />).toJSON();
-    expect(tree?.children?.length).toBe(2);
+    const tree = renderer.create(<TodoHeader title='Test'/>).toJSON();
+    expect(tree?.children.length).toBe(2);
   });
 
   it('renders correctly', () => {
